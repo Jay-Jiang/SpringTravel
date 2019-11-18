@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+person:
+  last-name: zhangsan
+  age: 22
+  marriage: false
+  params-list:
+    - a
+    - b
+    - c
+  birth: 2000/10/1
+  params-map:
+    like: wark
+    play: ball
+  dog:
+    name: ${person.last-name}'s dog
+    age: 2
