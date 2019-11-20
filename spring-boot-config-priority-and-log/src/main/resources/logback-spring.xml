@@ -7,9 +7,9 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 <configuration scan="false" scanPeriod="60 seconds" debug="false">
     <!-- 定义日志的根目录 -->
     <!-- /app/log：表示当前文件所在目录的系统根目录下，创建app目录，再创建 log 目录 -->
-    <property name="LOG_HOME" value="/spring-boot-app/log"/>
+    <property name="LOG_HOME" value="/spring-demo-logs"/>
     <!-- 定义日志文件名称 -->
-    <property name="appName" value="spring-boot-demo"></property>
+    <property name="appName" value="demo-log"></property>
 
     <!-- ch.qos.logback.core.ConsoleAppender 表示控制台输出 -->
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
