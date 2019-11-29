@@ -1,5 +1,6 @@
 package com.demo.springboot.controller;
 
+import com.demo.springboot.component.UserNotExistException;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +27,10 @@ public class LoginController {
 						RedirectAttributes redirectAttributes) {
 
 		if (!StringUtils.isEmpty(username) && "000000".equals(password)) {
+			//抛出自定义异常
+			if (!"admin".equals(username)) {
+				throw new UserNotExistException("用户[" + username + "]不存在");
+			}
 			session.setAttribute("loginUser", username);
 			//登录成功，跳转 dashboard 页面
 			//但是为了防止表单重复提交，需要进行重定向，重定向时不会再经过视图解析器
