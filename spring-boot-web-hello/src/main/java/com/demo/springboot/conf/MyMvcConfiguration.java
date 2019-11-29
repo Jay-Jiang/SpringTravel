@@ -48,7 +48,7 @@ public class MyMvcConfiguration implements WebMvcConfigurer {
 				//拦截任意级别的所有路径，但排除首页和登录，进行session 的登录校验
 				//springboot 虽然已经做好了静态资源映射，但是自定义拦截器仍然会影响静态资源
 				registry.addInterceptor(new MyHandlerInterceptor())
-						.addPathPatterns("/user/**","/curd/**","/main")
+						.addPathPatterns("/user/**","/curd/**","/main","/emps/**","/emp/**")
 						.excludePathPatterns("/user/login");
 						//.addPathPatterns("/**");
 						//.excludePathPatterns("/","/index","/index.html","/user/login","/webjars/**","/asserts/**");

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!--指定 icon 文件位置，可以正常加载-->
+    <link rel="shortcut icon" th:href="@{/favicon.ico}"/>
     <title>Signin Template for Bootstrap</title>
     <!-- Bootstrap core CSS -->
     <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/css/bootstrap.css}" rel="stylesheet">
@@ -16,7 +18,7 @@
 <form class="form-signin" th:action="@{/user/login}" method="post">
     <img class="mb-4" src="asserts/img/bootstrap-solid.svg" th:src="@{/asserts/img/bootstrap-solid.svg}" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tips}">Please sign in</h1>
-    <div class="checkbox mb-3" style="color: #ff0000;" th:if="${not #strings.isEmpty(msg)}" th:text="${msg}"></div>
+    <div class="checkbox mb-3" style="color: #ff0000;" th:if="${not #strings.isEmpty(#request.getAttribute('msg'))}" th:text="${#request.getAttribute('msg')}"></div>
     <label class="sr-only" th:text="#{login.username}">Username</label>
     <input type="text" name="username" class="form-control" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
     <label class="sr-only" th:text="#{login.password}">Password</label>
