@@ -59,6 +59,11 @@
 					<p>访问路径：[[${path}]]</p>
 					<p>异常信息：[[${message}]]</p>
 					<p>错误信息：[[${error}]]</p>
+
+					<p th:if="${author} != null">作者：[[${author}]]</p>
+					<p th:if="${company} != null">框架：[[${company}]]</p>
+					<p th:if="${from} != null">信息来源：[[${from}]]</p>
+					<p th:if="${exts} != null">额外参数：[[${exts}]]</p>
 				</main>
 			</div>
 		</div>
