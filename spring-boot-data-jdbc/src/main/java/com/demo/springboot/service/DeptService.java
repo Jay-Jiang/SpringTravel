@@ -1,6 +1,6 @@
 package com.demo.springboot.service;
 
-import com.demo.springboot.Entity.Department;
+import com.demo.springboot.entity.Department;
 import com.demo.springboot.dao.DeptDao;
 import com.demo.springboot.mapper.DepartmentMapper;
 import org.springframework.stereotype.Service;

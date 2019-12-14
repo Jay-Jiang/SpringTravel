@@ -1,6 +1,6 @@
 package com.demo.springboot.controller;
 
-import com.demo.springboot.Entity.Department;
+import com.demo.springboot.entity.Department;
 import com.demo.springboot.service.DeptService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

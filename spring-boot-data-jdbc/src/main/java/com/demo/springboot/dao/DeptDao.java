@@ -1,6 +1,6 @@
 package com.demo.springboot.dao;
 
-import com.demo.springboot.Entity.Department;
+import com.demo.springboot.entity.Department;
 
 import java.util.List;
 

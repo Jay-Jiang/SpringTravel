@@ -1,6 +1,6 @@
 package com.demo.springboot.dao.impl;
 
-import com.demo.springboot.Entity.Department;
+import com.demo.springboot.entity.Department;
 import com.demo.springboot.dao.DeptDao;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

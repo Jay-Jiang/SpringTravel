@@ -1,4 +1,4 @@
-package com.demo.springboot.Entity;
+package com.demo.springboot.entity;
 
 import lombok.Getter;
 import lombok.Setter;

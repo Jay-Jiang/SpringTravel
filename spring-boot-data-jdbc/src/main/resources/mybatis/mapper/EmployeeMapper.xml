@@ -4,7 +4,7 @@
 
 <mapper namespace="com.demo.springboot.mapper.EmployeeMapper">
 
-    <select id="selectEmpById" resultType="com.demo.springboot.Entity.Employee">
+    <select id="selectEmpById" resultType="com.demo.springboot.entity.Employee">
         select * from employee where id=#{id}
     </select>
 

@@ -1,6 +1,6 @@
 package com.demo.springboot.controller;
 
-import com.demo.springboot.Entity.Employee;
+import com.demo.springboot.entity.Employee;
 import com.demo.springboot.service.EmployeeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

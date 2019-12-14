@@ -1,6 +1,6 @@
 package com.demo.springboot.mapper;
 
-import com.demo.springboot.Entity.Employee;
+import com.demo.springboot.entity.Employee;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

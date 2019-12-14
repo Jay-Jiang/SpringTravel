@@ -1,6 +1,6 @@
 package com.demo.springboot.service;
 
-import com.demo.springboot.Entity.Employee;
+import com.demo.springboot.entity.Employee;
 import com.demo.springboot.mapper.EmployeeMapper;
 import org.springframework.stereotype.Service;
 
