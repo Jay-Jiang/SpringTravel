@@ -27,6 +27,7 @@
     <!-- 子工程 -->
     <modules>
         <module>spring-boot-web-hello</module>
+        <module>Junit</module>
     </modules>
 
     <!-- 依赖 -->
