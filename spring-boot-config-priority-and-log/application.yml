@@ -1,5 +1,0 @@
-server:
-  port: 8002
-
-# SpringBoot 1.5 生效
-# SpringBoot 2.2.1 不生效

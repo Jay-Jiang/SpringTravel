@@ -1,2 +1,3 @@
-# SpringBoot-demo
-SpringBoot 萌新入门到深入
+# Spring Travel
+
+Spring 序列“萌新”入门到深入
