@@ -1,5 +1,6 @@
 package com.demo.springboot.listener;
 
+import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -18,12 +19,12 @@ public class HelloSpringApplicationRunListener implements SpringApplicationRunLi
 	public HelloSpringApplicationRunListener(SpringApplication application, String[] args) { }
 
 	@Override
-	public void starting() {
+	public void starting(ConfigurableBootstrapContext bootstrapContext) {
 		System.out.println("应用正在启动 starting...");
 	}
 
 	@Override
-	public void environmentPrepared(ConfigurableEnvironment environment) {
+	public void environmentPrepared(ConfigurableBootstrapContext bootstrapContext, ConfigurableEnvironment environment) {
 		System.out.println("准备应用配置环境 environmentPrepared...");
 	}
 

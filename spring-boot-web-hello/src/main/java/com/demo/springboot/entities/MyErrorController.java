@@ -3,6 +3,7 @@ package com.demo.springboot.entities;
 import org.springframework.boot.autoconfigure.web.ErrorProperties;
 import org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController;
 import org.springframework.boot.autoconfigure.web.servlet.error.ErrorViewResolver;
+import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.boot.web.servlet.error.ErrorController;
 
@@ -36,10 +37,9 @@ public class MyErrorController extends BasicErrorController implements ErrorCont
 	 * 可以自定义响应的所有参数
 	 */
 	@Override
-	protected Map<String, Object> getErrorAttributes(HttpServletRequest request
-			, boolean includeStackTrace) {
+	protected Map<String, Object> getErrorAttributes(HttpServletRequest request, ErrorAttributeOptions options) {
 
-		Map<String, Object> map = super.getErrorAttributes(request, includeStackTrace);
+		Map<String, Object> map = super.getErrorAttributes(request, options);
 
 		//从 request 域中，获取异常处理时封装的参数
 		Map<String, Object> exts = (Map<String, Object>)request.getAttribute("exts");

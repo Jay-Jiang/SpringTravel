@@ -1,5 +1,6 @@
 package com.demo.springboot.entities;
 
+import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.web.context.request.WebRequest;
 
@@ -21,8 +22,8 @@ public class MyErrorAttributes extends DefaultErrorAttributes {
 	 * 可以自定义响应的所有参数
 	 */
 	@Override
-	public Map<String, Object> getErrorAttributes(WebRequest webRequest, boolean includeStackTrace) {
-		Map<String, Object> map = super.getErrorAttributes(webRequest, includeStackTrace);
+	public Map<String, Object> getErrorAttributes(WebRequest webRequest, ErrorAttributeOptions options) {
+		Map<String, Object> map = super.getErrorAttributes(webRequest, options);
 
 		//从 request 域中，获取异常处理时封装的参数
 		Map<String, Object> exts = (Map<String, Object>)webRequest.getAttribute("exts", 0);
